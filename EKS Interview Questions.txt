@@ -38,4 +38,9 @@ Scenario:
 - A Pod running a critical service has suddenly failed. How would you troubleshoot and resolve this issue?
 - How did you deploy your applications in k8s?
 - How do you scale your pods in a deployment using HPA?
-- 
+
+Docker Interview Questions:
+
+- Difference between CMD and ENTRYPOINT?
+- Differences between a docker Image and Layer?
+- Differentiate between COPY and ADD commands?
