@@ -1,0 +1,36 @@
+
+Linux Questions:
+
+## 1
+- command to rename a file
+- How to check pid of a process
+- How to check the port of a running service
+- How to search particular file in entire system
+- Explain the `grep` command in Linux
+- How to change a file permission
+- How to change file ownership
+
+- lsof
+
+## 2
+- What is the purpose of the `awk` command in Linux?
+- Difference between awk and sed commands ?  
+- Command to replace all occurence of word "apple" with "mango" in a file?  ==> sed -i 's/apple/mango/g' filename
+- how to check the expiry date of user password.
+
+
+Shell Scripting:
+
+## 1
+- How do you provide an input to a shell script while execution
+- How do you pass arguments / parameters to a shell script?
+- How to check the exit status of the last command ? ==> "$?"
+- How to list top 5 files with biggest size on top? ==>du -ah /path/to/directory | sort -rh | head -n 5
+- What is use of ‘$#’ in shell scripting? display the total number of passed arguments to the script
+- Exit status 0 means?
+
+## 2
+- How do you store all the logs while executing shell script
+- How will you debug problems encountered in the shell program?
+- Difference between for loop and while loop and usecases
+- What is functions in shell scipt? How to use them?
