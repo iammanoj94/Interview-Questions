@@ -1,0 +1,41 @@
+EKS Interview Questions:
+
+- Explain the key components of Amazon EKS?
+- Which EKS version have you used?
+- How does EKS manage worker nodes?
+- You want to deploy an EKS cluster that spans multiple Availability Zones (AZs)
+- How can you scale an application running on EKS?
+- What is AWS Load Balancer Controller in EKS?
+
+- How would you expose your application running in a pod to outside traffic?
+- You need to update the application with zero downtime. How would you achieve this?
+
+K8S Questions:
+
+- WHat is Master Node and What are its components? ETCD, controller manager , API Server, Schedule
+- What are components of Worker node
+
+- Difference between Docker and Kubernetes?
+- What is a Pod in k8s?
+- What are namespaces in Kubernetes?
+- WHat is difference between deployment and statefulset? persistent storage, deployed in order
+- When to use stateful set
+- What is meant by Deamonset and when to use it?
+- WHat are types of Auto Scaling features available in EKS?
+- What is configmap in Kubernetes?
+- What is ingress in Kubernetes?
+
+Commnds:
+
+- How to check pod logs in eks?
+- Command to check how many nodes are present in cluster?
+- How to list all pods running in your cluster in all namespaces?
+- Command to scale your deployment to 10 pods
+
+
+Scenario:
+
+- A Pod running a critical service has suddenly failed. How would you troubleshoot and resolve this issue?
+- How did you deploy your applications in k8s?
+- How do you scale your pods in a deployment using HPA?
+- 

@@ -1,0 +1,16 @@
+Ansible Interview Questions
+
+- Describe how Ansible works.
+- What are Modules in Ansible?
+- Explain some modules you have used ?
+   - Can you exaplain copy module
+   - diff between copy and fetch module
+- What are Roles in Ansible?
+- What are “facts” in the context of Ansible?
+- What’s an ad hoc command?
+- What’s a handler? notify -> handler
+- How do you print statements during playbook execution?
+- 
+
+- How do you manage secrets in Ansible
+- How do you manage multiple env in Ansible?

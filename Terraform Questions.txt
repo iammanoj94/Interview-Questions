@@ -1,0 +1,90 @@
+Terraform Questions:
+
+- Can you explain your project terraform structure?
+- What are terraform modules and how can you use them?
+- How can you create multiple resources of same type?
+- Describe the "count" and "for_each" meta-arguments in resource blocks.
+- Explain diff b/n resources and data sources in Terraform
+- What is state file in terraform?
+- How to Configure Terraform backend with AWS S3?
+- If multiple people are working for a project, how can you manage the terraform code and avoid conflicts?
+- How do you resolve state file conflicts ?
+- How do you manage resources across multiple environments using Terraform?
+- If you want a resource to be created in qa env and do not want it to be created in UAT? how do you achieve that 
+- How do you ensure that resources are created in the correct order when there are dependencies between them?
+- How do you import existing resources that were not managed by Terraform into your Terraform configuration?
+- 
+
+####################################################################################
+
+Most Frequently Asked Questions on Terraform.
+1. What is Terraform, and how does it work?
+Answer: Terraform is an open-source infrastructure-as-code (IaC) tool developed by HashiCorp. It allows users to define, provision, and manage infrastructure resources declaratively using a high-level configuration language. Terraform works by reading the configuration files (written in HCL - HashiCorp Configuration Language or JSON) and translating them into API calls to interact with various infrastructure providers.
+
+2. Explain the difference between Terraform and other configuration management tools like Ansible or Chef.
+Answer: While Ansible, Chef, and similar tools focus on configuration management and automating software deployment, Terraform is specifically designed for infrastructure provisioning and management. Terraform is best suited for creating and managing cloud resources, virtual machines, networks, etc., while configuration management tools are more focused on configuring and maintaining software applications.
+
+3. How do you define infrastructure in Terraform?
+Answer: Infrastructure in Terraform is defined using configuration files written in HCL (HashiCorp Configuration Language). These files typically have a ".tf" extension. In the configuration, you specify the desired state of the infrastructure by defining resources, providers, data sources, and other configuration blocks.
+
+4. What are the main components of a Terraform configuration?
+Answer: The main components of a Terraform configuration are:
+Providers: They define the cloud or infrastructure platform where resources will be created.
+Resources: They define the infrastructure components you want to manage (e.g., virtual machines, networks).
+Data Sources: They fetch information from external sources (e.g., existing infrastructure) to use within the configuration.
+Variables: They allow you to parameterize your configuration.
+Outputs: They define values that are useful to display or pass to other parts of the configuration.
+
+5. What is the purpose of Terraform's state file?
+Answer: The Terraform state file keeps track of the current state of the managed infrastructure. It helps Terraform understand what resources are provisioned, their configuration, and the relationships between them. The state file is crucial for Terraform to manage and modify infrastructure accurately without causing unintended changes.
+
+6. How do you manage sensitive data, such as passwords or API tokens, in Terraform?
+Answer: Terraform offers several ways to manage sensitive data:
+Using environment variables or shell profiles to store sensitive information securely.
+Utilizing Terraform's built-in sensitive data handling, which masks sensitive output in the CLI and UI.
+Leveraging third-party tools like HashiCorp Vault to securely manage secrets and access tokens.
+
+7. What is a provider in Terraform, and why is it essential?
+Answer: A provider is a plugin in Terraform that enables interaction with a specific infrastructure platform or cloud provider (e.g., AWS, Azure, Google Cloud). Providers handle the API calls and resource management for the platform. They are crucial as they allow Terraform to manage resources in various environments using consistent configuration syntax.
+
+8. Explain the concept of resources and data sources in Terraform.
+Answer: Resources are the primary constructs in Terraform used to define and manage infrastructure components. They represent the desired state of a particular resource type, such as virtual machines, networks, or databases. Data sources, on the other hand, allow you to fetch data from external sources (e.g., an existing infrastructure or API) and use that data within your Terraform configuration.
+
+9. What is the difference between a Terraform module and a remote state data source?
+Answer: A Terraform module is a reusable set of Terraform configurations that represent a specific piece of infrastructure, making it easy to manage and share code. It is used to encapsulate related resources and provide a higher-level abstraction. On the other hand, a remote state data source allows you to fetch the current state of infrastructure from a separate Terraform state file stored remotely, which is useful when sharing state between different configurations or teams.
+
+10. How does Terraform handle dependencies between resources?
+Answer: Terraform automatically manages dependencies between resources based on their declared relationships. When a resource depends on another, Terraform ensures that the dependent resource is created or modified before proceeding to the next resource in the plan. This dependency management ensures that resources are provisioned in the correct order.
+
+11. What is the purpose of the "terraform plan" command?
+Answer: The "terraform plan" command is used to create an execution plan. It analyzes the current Terraform configuration and compares it with the state to determine what changes are necessary to achieve the desired state. The plan provides a detailed overview of the actions Terraform will take, such as creating, modifying, or destroying resources, without actually applying those changes.
+
+12. How can you manage multiple environments (e.g., development, staging, production) with Terraform?
+Answer: Terraform provides "workspaces" to manage multiple environments. Each workspace allows you to maintain separate state files for each environment while using the same configuration files. You can switch between workspaces using the "terraform workspace select" command. This enables you to apply changes independently to different environments without interfering with one another.
+
+13. How do you manage Terraform remote backends for state storage and why is it important?
+Answer: Terraform remote backends (e.g., Amazon S3, Azure Blob Storage, HashiCorp Terraform Cloud) store the state file remotely instead of locally. Storing state remotely allows multiple team members to collaborate on a project securely and ensures consistent state management across environments. Additionally, remote backends provide features like state locking, which prevents concurrent state modifications and avoids conflicts.
+
+14. What are Terraform workspaces, and how can they be beneficial in managing infrastructure deployments?
+Answer: Terraform workspaces are isolated environments within a single configuration. They enable the management of multiple sets of infrastructure with distinct state files using the same configuration. Workspaces help keep different environments separate (e.g., development, staging, production), preventing accidental changes in one environment from affecting others.
+
+15. Explain the "lifecycle" attribute in Terraform and its significance.
+Answer: The "lifecycle" attribute is used to control the behavior of resources over their lifecycle. It allows you to manage how resources are created, updated, and destroyed. Commonly used lifecycle options include "create_before_destroy" (creates a new resource before destroying the old one), "ignore_changes" (prevents certain attributes from triggering updates), and "prevent_destroy" (blocks a resource from being destroyed).
+
+16. How do you handle Terraform configuration upgrades and state migration?
+Answer: When upgrading Terraform configurations, it's essential to follow the upgrade guides provided by Terraform's documentation to address any breaking changes. Regarding state migration, you can use "terraform state" commands (e.g., "terraform state mv") to manually move resources between states or use automation scripts to perform the migration.
+
+17. Describe the "count" and "for_each" meta-arguments in resource blocks.
+Answer: Both "count" and "for_each" meta-arguments allow you to create multiple instances of a resource. "count" is used to create multiple resources based on an integer value, while "for_each" is used to create multiple resources based on a map or set of strings. The key difference is that "count" creates identical copies, whereas "for_each" allows more flexibility by specifying distinct attributes for each resource instance.
+
+18. How can you manage secrets and sensitive data with Terraform Cloud or Terraform Enterprise?
+Answer: Terraform Cloud or Terraform Enterprise provides a secure solution for managing secrets through its sensitive data handling features. It allows you to store sensitive data (e.g., passwords, API tokens) securely as environment variables, workspace variables, or using Vault integration, ensuring that sensitive information is not exposed in Terraform configuration files.
+
+19. What is Terraform's "null_resource," and how can it be useful?
+Answer: The "null_resource" in Terraform is a resource type that allows you to define a provisioner without creating an actual infrastructure resource. It's useful for performing arbitrary actions on the local machine or remotely, such as running scripts or commands after creating other resources.
+
+20. How do you troubleshoot and debug Terraform issues?
+Answer: To troubleshoot Terraform issues, you can:
+Review the Terraform logs to identify error messages or warnings.
+Use the "terraform validate" command to check for syntax errors in the configuration.
+Check provider-specific documentation for troubleshooting tips.
