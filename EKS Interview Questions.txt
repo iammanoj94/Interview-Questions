@@ -19,6 +19,8 @@ EKS Interview Questions:
 - How would you expose your application running in a pod to outside traffic?
 - Deploying a microservices architecture on Kubernetes. How would you manage inter-service communication?
 
+##3
+- Service 1 in Namespace A wants to connect to Service 2 in Namespace B, how can we acheive that
 
 Commnds:
 
