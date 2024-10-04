@@ -1,28 +1,18 @@
 AWS Interview Questions:
 
 EC2:
-- Which AWS services have you worked on?
+
 - What are various types of instances available in AWS? Which type of instance have you used
-- What is UserData in AWS?
 - What is ASG and steps to setup ASG?
-- What is Loadbalancer in AWS?
-- What is Listener in Application Load balancer?
+- What is Loadbalancer in AWS? What is Listener in Application Load balancer?
+- Is AMI global or regional?
+- How to create identical ec2 in second region
 
-##2
-- How to provide internet access to ec2 in private subnet? NAT in public subnet
-- How to enable an ec2 instance access objects in S3 bucket?
-- On-Prem to AWS Ec2 connectivity issue? How to troubleshoot
-- Role in one account access S3 buckets in another account
--  How did you setup networking security in your application
--  How to check the network activity to VPC and check which ip's are trying to access your env
--* How to make all your instances off during weekends?
-
-##3
-- How would you use AWS Lambda and API Gateway to build a serverless REST API?
-
-Security Groups:
-- What is an AWS Security Group? 
-- Differences b/w Security Group and network access control list (NACL)?
+VPC:
+- What is a NAT Device?
+- What is route table? can you explain a rule?
+- How to setup connectivity between two different VPC's?
+- What is diff between vpc peering and vpc endpoints?
 
 IAM:
 - explain the IAM Policy Structure
@@ -33,29 +23,33 @@ S3:
 - How can you secure data in S3 buckets?
 - Versioning in Amazon S3? What are things to consider for using it?
 
-VPC:
-- What is a NAT Device?
-- What is route table? can you explain a rule?
-- How to setup connectivity between two different VPC's?
-- What is diff between vpc peering and vpc endpoints?
+##2
+- How to provide internet access to ec2 in private subnet? NAT in public subnet
+- How to enable an ec2 instance access objects in S3 bucket?
+- On-Prem to AWS Ec2 connectivity issue? How to troubleshoot
+- Role in one account access S3 buckets in another account
+- How did you setup networking security in your application
+- How to check the network activity to VPC and check which ip's are trying to access your env
+
+
+##3
+- How to make all your instances off during weekends?
+- How can you setup a scalable and Highly available application running in an ec2-instaces.
+- How do you setup a security for an Application in AWS
+- How would you implement a disaster recovery solution in AWS using RDS, EC2, and S3?
+- How would you use AWS Lambda and API Gateway to build a serverless REST API?
+
+Security Groups:
+- Differences b/w Security Group and network access control list (NACL)?
 
 Route 53:
-- Explain the concept of S3 buckets and objects
-- What Is Amazon Route 53?
 - What is Route 53 hosted zone?
 - What are various type of records we can create in Route 53? CNAME, A-record
 
 SQS:
 - What is SQS and where do you use it
 
-
-DR:
-- How would you implement a disaster recovery solution in AWS using RDS, EC2, and S3?
-- How to perform a cutover activity
-
 ECS:
-
 - Explain the concepts of Amazon ECS, like clusters, tasks, services, and task definitions.
 - How do you implement microservices application in ECS?
 - Where do you provide the container specification like container memory / CPU?
-- How do you monitor and troubleshoot ECS deployments?
