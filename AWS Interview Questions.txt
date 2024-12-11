@@ -12,7 +12,7 @@ VPC:
 - What is a NAT Device?
 - What is route table? can you explain a rule?
 - How to setup connectivity between two different VPC's?
-- What is diff between vpc peering and vpc endpoints?
+- How do you create a NACL?
 
 IAM:
 - explain the IAM Policy Structure
@@ -22,6 +22,11 @@ S3:
 - What is lifecycle in s3 buckets?
 - How can you secure data in S3 buckets?
 - Versioning in Amazon S3? What are things to consider for using it?
+
+Lambda:
+- How do you deploy your app code to your lambda?
+- How did you create lambda handler?
+
 
 ##2
 - How to provide internet access to ec2 in private subnet? NAT in public subnet
