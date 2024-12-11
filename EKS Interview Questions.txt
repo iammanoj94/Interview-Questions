@@ -2,20 +2,18 @@ EKS Interview Questions:
 
 ##1
 - Explain the key components of Amazon EKS?
-- How does EKS manage worker nodes?
 - What is meant by Deamonset and when to use it?
 - What is difference between deployment and statefulset? ==>persistent storage, deployed in order
 - What is AWS Load Balancer Controller in EKS?
-- What is ingress in Kubernetes?
-- Difference between configmap and secrets?
+- What is ingress and how does it work?
+- Difference between Nodeport & ClusterIP?
+- A Pod is failing to start. How would you troubleshoot and resolve this issue?
 
 ##2
 - Explain your entire application flow?
 - Scale a deployment based on CPU utilization. Describe how you would implement autoscaling.
 - How do you scale your pods in a deployment using HPA?
 - You need to update the application with zero downtime. How would you achieve this?
-- A Pod is failing to start. How would you troubleshoot and resolve this issue?
-- Deploying a stateful application on Kubernetes. How would you ensure data persistence and high availability?
 - How would you expose your application running in a pod to outside traffic?
 - Deploying a microservices architecture on Kubernetes. How would you manage inter-service communication?
 
