@@ -5,12 +5,14 @@ Ansible Interview Questions
 - Explain some modules you have used ?
    - Can you exaplain copy module
    - diff between copy and fetch module
-- What are Roles in Ansible?
-- What are “facts” in the context of Ansible?
 - What’s an ad hoc command?
+
+- What are “facts” in the context of Ansible?
+- What are Roles in Ansible?
 - What’s a handler? notify -> handler
 - How do you print statements during playbook execution?
-- 
-
 - How do you manage secrets in Ansible
 - How do you manage multiple env in Ansible?
+
+Scripts
+- Write a playbook to copy a file , install nginx package and start nginx service?
