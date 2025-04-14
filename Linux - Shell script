@@ -2,21 +2,16 @@
 Linux Questions:
 
 ## 1
-- command to rename a file
 - How to check pid of a process
 - How to check the port of a running service
 - How to search particular file in entire system
-- Explain the `grep` command in Linux
 - How to change a file permission
 - How to change file ownership
-
-- lsof
 
 ## 2
 - What is the purpose of the `awk` command in Linux?
 - Difference between awk and sed commands ?  
 - Command to replace all occurence of word "apple" with "mango" in a file?  ==> sed -i 's/apple/mango/g' filename
-- how to check the expiry date of user password.
 
 
 Shell Scripting:
@@ -32,5 +27,4 @@ Shell Scripting:
 ## 2
 - How do you store all the logs while executing shell script
 - How will you debug problems encountered in the shell program?
-- Difference between for loop and while loop and usecases
-- What is functions in shell scipt? How to use them?
+
