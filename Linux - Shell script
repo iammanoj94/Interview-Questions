@@ -18,13 +18,20 @@ Shell Scripting:
 
 ## 1
 - How do you provide an input to a shell script while execution
-- How do you pass arguments / parameters to a shell script?
 - How to check the exit status of the last command ? ==> "$?"
 - How to list top 5 files with biggest size on top? ==>du -ah /path/to/directory | sort -rh | head -n 5
 - What is use of ‘$#’ in shell scripting? display the total number of passed arguments to the script
-- Exit status 0 means?
 
 ## 2
 - How do you store all the logs while executing shell script
 - How will you debug problems encountered in the shell program?
 
+Script Excercises:
+
+Q  Write a script that takes a process name as an argument and: 
+    - Checks if it's running.
+    - If it is, prints its PID.
+    - If not, prints a message and exits with status code 1.
+Q  Write a script that checks if any partition is above 80% disk usage and alerts the user with a message showing the partition and usage percentage.
+
+Q  Write a script that takes a directory name as input and creates a compressed tarball backup with the current date in the filename (e.g., backup-2025-04-24.tar.gz).
