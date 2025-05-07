@@ -15,4 +15,88 @@ Ansible Interview Questions
 - How do you manage multiple env in Ansible?
 
 Scripts
-- Write a playbook to copy a file , install nginx package and start nginx service?
+Exercise 1: Create a simple Ansible playbook that:
+1. Installs the httpd package on a remote server.
+2. Ensures the httpd service is started and enabled.
+3. Deploys an index.html file with the content "Hello, World!" to the document root.
+
+
+Exercise 2: Using Variables
+Question:
+Create an Ansible playbook that:
+1. Defines a variable packages containing a list of packages: git, curl.
+2. Installs all the packages listed in the packages variable.
+
+
+Exercise 3: Handlers
+Question:
+Create an Ansible playbook that:
+1. Installs and configures nginx server.
+2. Copies a configuration file.
+3. Uses handlers to restart nginx only if the configuration file has changed.
+
+
+Soln1: Install httpd and deploy index.html
+---
+- name: Basic HTTPD setup
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Install httpd package
+      ansible.builtin.yum:     
+        name: httpd
+        state: present
+      
+    - name: Start and enable httpd service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Deploy index.html
+      ansible.builtin.copy:
+        content: "Hello, World!"
+        dest: /var/www/html/index.html
+
+Soln2: Using Variables
+
+yaml
+---
+- name: Install multiple packages
+  hosts: all
+  become: yes
+  vars:
+    packages:
+      - git
+      - curl
+  tasks:
+    - name: Install packages
+      ansible.builtin.yum:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ packages }}"
+
+Soln3: Handlers
+
+yaml
+---
+- name: Nginx configuration
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Install nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: present
+    
+    - name: Copy nginx configuration
+      ansible.builtin.copy:
+        src: ./nginx.conf
+        dest: /etc/nginx/nginx.conf
+        notify: Restart nginx
+
+  handlers:
+    - name: Restart nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
