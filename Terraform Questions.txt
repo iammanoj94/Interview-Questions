@@ -1,17 +1,17 @@
 Terraform Questions:
 
-- Can you explain your project terraform structure?
+* - Can you explain your project terraform structure?
 - What are terraform modules and how can you use them?
-- How can you create multiple resources of same type?
+* - How can you create multiple resources of same type?
 - Describe the "count" and "for_each" meta-arguments in resource blocks.
 - Explain diff b/n resources and data sources in Terraform
-- What is state file in terraform?
+* - What is state file in terraform?
 - How to Configure Terraform backend with AWS S3?
-- If multiple people are working for a project, how can you manage the terraform code and avoid conflicts?
+*- If multiple people are working for a project, how can you manage the terraform code and avoid conflicts?
 - How do you resolve state file conflicts ?
 - How do you manage resources across multiple environments using Terraform?
 - If you want a resource to be created in qa env and do not want it to be created in UAT? how do you achieve that 
-- How do you ensure that resources are created in the correct order when there are dependencies between them?
+* - How do you ensure that resources are created in the correct order when there are dependencies between them?
 - How do you import existing resources that were not managed by Terraform into your Terraform configuration?
 - 
 
