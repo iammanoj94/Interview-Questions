@@ -14,6 +14,8 @@ VPC:
 - How to setup connectivity between two different VPC's?
 - How do you create a NACL?
 
+- 
+
 IAM:
 - explain the IAM Policy Structure
 
@@ -40,9 +42,11 @@ Lambda:
 ##3
 - How to make all your instances off during weekends?
 - How can you setup a scalable and Highly available application running in an ec2-instaces.
-- How do you setup a security for an Application in AWS
 - How would you implement a disaster recovery solution in AWS using RDS, EC2, and S3?
 - How would you use AWS Lambda and API Gateway to build a serverless REST API?
+- Setup private connection between s3 and ec2 without internet access (s3 endpoints)
+- setup connectivity from on-premise to cloud
+- How do you setup a security for an Application in AWS
 
 Security Groups:
 - Differences b/w Security Group and network access control list (NACL)?
@@ -58,3 +62,4 @@ ECS:
 - Explain the concepts of Amazon ECS, like clusters, tasks, services, and task definitions.
 - How do you implement microservices application in ECS?
 - Where do you provide the container specification like container memory / CPU?
+
